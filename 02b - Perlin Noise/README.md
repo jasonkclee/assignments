@@ -1,0 +1,3 @@
+# Explanation
+This program moves a circle smoothly around the screen. The noise function is used to produce smooth movement.
+The noise function returns a smooth set of numbers from 0 to 1; multiplying this value by the width/height gives smooth coordinates between 0-width (for x) and 0-height (for y). 1D noise is used for each coordinate; the "count" variable is slowly increased and passed into the noise function to get the noise value. A large number was added to count for the y coordinate so that the x and y coordinate would have different and distinct values (i.e. noise(count) == noise(count), noise(count) != noise(count+99999)).
